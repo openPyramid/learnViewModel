@@ -55,7 +55,6 @@ class GameFragment : Fragment() {
         // 初始化viewModel，并把其关联到当前fragment。
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
 
-
         binding.correctButton.setOnClickListener {
             viewModel.onCorrect()
         }
