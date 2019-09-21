@@ -40,6 +40,18 @@ class TitleFragment : Fragment() {
         binding.playGameButton.setOnClickListener {
             findNavController().navigate(TitleFragmentDirections.actionTitleToGame())
         }
+
+        val expressionLambda: (Int) -> Unit = {s: Int ->
+            println(s)
+            println("++++++++++++++-----++++++++++")
+        }
+        testMultiplyWithLambda(4, 6, expressionLambda)
+
         return binding.root
+    }
+
+    fun testMultiplyWithLambda(num1: Int, num2: Int, lambdaExpression: (Int) -> Unit) {
+        val result: Int = num1 * num2
+        lambdaExpression(result)
     }
 }
