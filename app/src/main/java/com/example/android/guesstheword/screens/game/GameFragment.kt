@@ -56,12 +56,7 @@ class GameFragment : Fragment() {
         // 初始化viewModel，并把其关联到当前fragment。
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
 
-        binding.correctButton.setOnClickListener {
-            viewModel.onCorrect()
-        }
-        binding.skipButton.setOnClickListener {
-            viewModel.onSkip()
-        }
+        binding.gameViewModel = viewModel
 
 //        viewModel.score.observe(this, Observer { newScore ->
 //            binding.scoreText.text = viewModel.score.toString()
