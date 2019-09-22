@@ -63,9 +63,6 @@ class GameFragment : Fragment() {
 //        viewModel.score.observe(this, Observer { newScore ->
 //            binding.scoreText.text = viewModel.score.toString()
 //        })
-        viewModel.score.observe(this, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
 
         viewModel.eventGameFinish.observe(this, Observer { hasFinished ->
             if(hasFinished) {
