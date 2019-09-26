@@ -56,7 +56,7 @@ class GameFragment : Fragment() {
                 false
         )
 
-        Log.i("GameFragment", "Called ViweModelProviders.of!")
+        Log.i("Game Fragment", "Called ViweModelProviders.of!")
         // 初始化viewModel，并把其关联到当前fragment。
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
 
